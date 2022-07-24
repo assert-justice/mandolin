@@ -10,6 +10,7 @@ class Checkpoint is Sprite {
         _radius = 12
         _roomX = 0
         _roomY = 0
+        _audioSource = AudioSource.new(this, "game_data/sfx/Powerup__006.wav", false)
     }
     setRoom(x,y){
         _roomX = x
@@ -30,6 +31,7 @@ class Checkpoint is Sprite {
             dis.y = dis.y - transform.position.y
             if(dis.length < _radius){
                 _manager.setCheckpoint(getData())
+                _audioSource.play()
             }
         }
         super.update(deltaTime)
