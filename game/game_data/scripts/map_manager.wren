@@ -86,6 +86,8 @@ class MapManager is Node {
             if(name == "player_spawn"){
                 spawnX = rx
                 spawnY = ry
+                _checkpointData = "%(rx)_%(ry)_%(x - rx * roomWidth)_%(y - ry * roomHeight)"
+                System.print(_checkpointData)
                 spawned = true
                 continue
             }
@@ -98,8 +100,8 @@ class MapManager is Node {
     }
     hit(){
         var data = _checkpointData.split("_").map{|n| Num.fromString(n)}.toList
-        _player.transform.position.x = data[2]
-        _player.transform.position.y = data[3]
+        _player.transform.position.x = data[2].floor
+        _player.transform.position.y = data[3].floor
         _player.update(0)
         setRoom(data[0], data[1])
     }
