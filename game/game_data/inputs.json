@@ -1,0 +1,12 @@
+{
+    "ui_cancel": {"type": "button"},
+    "ui_confirm":{"type": "button"},
+    "ui_left":{"type": "button", "pulse_delay": 0.25, "pulse_time": 0.1},
+    "ui_right":{"type": "button", "pulse_delay": 0.25, "pulse_time": 0.1},
+    "ui_up":{"type": "button", "pulse_delay": 0.25, "pulse_time": 0.1},
+    "ui_down":{"type": "button", "pulse_delay": 0.25, "pulse_time": 0.1},
+    
+    "fire":{"type": "button"},
+    "jump":{"type": "button"},
+    "move":{"type": "axis2", "deadzone":0.25, "filter": "standard"}
+}

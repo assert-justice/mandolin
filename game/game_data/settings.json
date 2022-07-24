@@ -1,0 +1,9 @@
+{
+    "title": "Test",
+    "fullScreen": false,
+    "monitorIndex": 0,
+    "width": 960,
+    "height": 540,
+    "refreshRate": 0,
+    "vsync": true
+}
